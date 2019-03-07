@@ -7,21 +7,32 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SearchComponent } from './search/search.component';
+import {MatDialogModule} from "@angular/material";
+import { ApplicationComponent } from './application/application.component';
+import { BookingComponent } from './booking/booking.component';
+import { UwComponent } from './uw/uw.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    ApplicationComponent,
+    BookingComponent,
+    UwComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SearchComponent]
 })
 export class AppModule { }
