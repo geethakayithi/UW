@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -12,13 +11,13 @@ export class LoginComponent implements OnInit {
   email = 'test@gmail.com';
   password = 'Test';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
   tryLogin() {
     console.log('inside trylogin');
-
+    this.router.navigateByUrl('/home');
 
 }
 }
