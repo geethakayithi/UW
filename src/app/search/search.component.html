@@ -1,22 +1,43 @@
+<form>
+  <p class="h4 text-center ">Search</p>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="appid">App ID</label>
+        <input type="text" class="form-control form-control-sm rounded-0" id="appid">
+      </div>
+      <div class="form-group">
+        <label for="tin">TIN</label>
+        <input type="text" class="form-control  form-control-sm rounded-0" id="tin">
+      </div>
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" class="form-control form-control-sm rounded-0" id="fname">
+      </div>
 
-<form class="text-center border border-light p-5">
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="business">Business name</label>
+        <input type="text" class="form-control form-control-sm rounded-0" id="business">
+      </div>
+      <div class="form-group">
+        <label for="">CIN</label>
+        <input type="text" class="form-control form-control-sm rounded-0" id="cin">
+      </div>
 
-  <p class="h4 mb-12">Search</p>
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" class="form-control form-control-sm rounded-0" id="lname">
+      </div>
+    </div>
+  </div>
 
-  <input type="text" id="appid" class="form-control mb-4" placeholder="App ID">
- 
-  <input type="text" id="businessname" class="form-control mb-4" placeholder="Business name">
-  
-  <input type="text" id="cin" class="form-control mb-4" placeholder="CIN">
-  <input type="text" id="ssn" class="form-control mb-4" placeholder="SSN">
-  <input type="text" id="tin" class="form-control mb-4" placeholder="TIN">
-  <input type="text" id="fname" class="form-control mb-4" placeholder="First name">
-  <input type="text" id="lname" class="form-control mb-4" placeholder="Last Name">
- 
 
-  <button class="btn btn-info btn-block my-4" (click)="search()"type="submit">Search</button>
-
-  
-
+<div style="text-align:right;">
+    <button type="submit" (click)="search()" class="btn btn-primary ">Search</button>
+</div>
   
 </form>
+<hr>
+<p>Search results will be displayed here</p>

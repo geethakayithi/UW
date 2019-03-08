@@ -1,28 +1,28 @@
-<nav class="navbar navbar-expand-sm bg-light justify-content-center">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Application</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">UW page</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Booking</a>
-    </li>
+<div class="container">
+  <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#app">Application</a></li>
+    <li><a data-toggle="tab" href="#uw">UW</a></li>
+    <li><a data-toggle="tab" href="#booking">Booking</a></li>
   </ul>
   <form class="form-inline" >
     
     <button class="btn btn-primary" (click)="search()">Search</button>
   </form>
 </nav>
-
-
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12 text-center"><button type="button" class="btn btn-primary">Search</button></div>
-  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+     
+    </div>
+    <div id="app" class="tab-pane fade">
+      <app-application></app-application>
+    </div>
+    <div id="uw" class="tab-pane fade">
+      <app-uw></app-uw>
+    </div>
+    <div id="booking" class="tab-pane fade">
+      <app-booking></app-booking>
+    </div>
   </div>
-</div> -->
+</div>

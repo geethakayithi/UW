@@ -12,24 +12,18 @@ export class HomeComponent implements OnInit {
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
-    
-this.search();
-      // const dialogConfig = new MatDialogConfig();
-
-      // dialogConfig.disableClose = true;
-      // dialogConfig.autoFocus = true;
-      // dialogConfig.minWidth = 800;
-
-      // this.dialog.open(SearchComponent, dialogConfig);
-  
-    
+        
   }
   search(){
     const dialogConfig = new MatDialogConfig();
 
       dialogConfig.disableClose = true;
       dialogConfig.autoFocus = true;
-      dialogConfig.minWidth = 800;
+      dialogConfig.minWidth = '50%';
+      dialogConfig.position = {
+        'top': '5%',
+        left: '25%'
+    };
 
       this.dialog.open(SearchComponent, dialogConfig);
   }
