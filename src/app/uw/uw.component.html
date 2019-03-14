@@ -1,56 +1,362 @@
 <div class="form-cust border">
-  <div class="col-sm-8 offset-sm-2">
-    <h5 class="text-center ">Application Decision Information</h5>
-    <form class="justify-content-center ">
-      <div class="form-group row">
-        <label for="appid" class="col-sm-6 col-form-label">Application ID</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm rounded-0" id="appid">
+  <!--Accordion wrapper-->
+  <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+    <!-- Accordion card -->
+    <div class="card">
+
+      <!-- Card header -->
+      <div class="card-header" role="tab" id="headingOne1">
+        <a data-toggle="collapse" data-parent="#accordionEx" href="#appdecision" aria-expanded="true"
+          aria-controls="collapseOne1">
+          <h5 class="mb-0 text-center">
+            Application Decision Information <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="appdecision" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+        data-parent="#accordionEx">
+        <div class="card-body">
+          <div class="col-sm-8 offset-sm-2">
+            <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+            <form class="justify-content-center ">
+              <div class="form-group row">
+                <label for="appid" class="col-sm-6 col-form-label">Application ID</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control form-control-sm " id="appid">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Business Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Promo Code</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Relationship Manager First Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Relationship Manager Last Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Relationship Manager Title</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">HSBC Representative Phone Number</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Cost Center</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">Business Name</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
+
+    </div>
+    <!-- Accordion card -->
+
+    <!-- Accordion card -->
+    <div class="card">
+
+      <!-- Card header -->
+      <div class="card-header" role="tab" id="headingTwo2">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#fico"
+          aria-expanded="false" aria-controls="fico">
+          <h5 class="mb-0 text-center">
+            Business Score and FICO <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="fico" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+        <div class="card-body">
+          <div class="justify-content-center ">
+            <div style="width:250px; height:250px;">
+              <canvas id="canvas">{{ myDoughnutChart }}</canvas>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">Promo Code</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
+
+    </div>
+    <!-- Accordion card -->
+
+    <!-- Accordion card -->
+    <div class="card">
+
+      <!-- Card header -->
+      <div class="card-header" role="tab" id="headingThree3">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#appscore"
+          aria-expanded="false" aria-controls="appscore">
+          <h5 class="mb-0 text-center">
+            Application Score <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="appscore" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+        data-parent="#accordionEx">
+        <div class="card-body">
+          <div class="col-sm-8 offset-sm-2">
+            <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+
+            <form class="justify-content-center ">
+              <div class="form-group row">
+                <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">123</p>
+                  <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Median Offer Amount</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Decile</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control  form-control-sm " id="business">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">abc</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Review Reason 2</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">abc</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Review Reason 3</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">abc</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Review Reason 4</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">abc</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+
+            </form>
+          </div>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">Relationship Manager First Name</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
+
+    </div>
+    <!-- Accordion card -->
+
+  </div>
+  <!-- Accordion wrapper -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#bcr" aria-expanded="false"
+        aria-controls="bcr">
+        <h5 class="mb-0 text-center">
+          Business Credit Report Info <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="bcr" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+      <div class="card-body">
+        <div class="col-sm-8 offset-sm-2">
+          <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+
+          <form class="justify-content-center ">
+            <div class="form-group row">
+              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">123</p>
+                <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">abc</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+
+
+          </form>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">Relationship Manager Last Name</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#ccr" aria-expanded="false"
+        aria-controls="collapseTwo2">
+        <h5 class="mb-0 text-center">
+          Consumer Credit Report Info <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="ccr" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+      <div class="card-body">
+        <div class="col-sm-8 offset-sm-2">
+          <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+
+          <form class="justify-content-center ">
+            <div class="form-group row">
+              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">123</p>
+                <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">abc</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+
+
+          </form>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">Relationship Manager Title</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
+    </div>
+
+  </div>
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#reviewreason" aria-expanded="false"
+        aria-controls="collapseTwo2">
+        <h5 class="mb-0 text-center">
+          Review Reason <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="reviewreason" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+      <div class="card-body">
+        <div class="col-sm-8 offset-sm-2">
+          <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+
+          <form class="justify-content-center ">
+            <div class="form-group row">
+              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">123</p>
+                <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">abc</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+
+
+          </form>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">HSBC Representative Phone Number</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#pi" aria-expanded="false"
+        aria-controls="pi">
+        <h5 class="mb-0 text-center">
+          Product Information <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="pi" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+      <div class="card-body">
+        <div class="col-sm-8 offset-sm-2">
+          <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+
+          <form class="justify-content-center ">
+            <div class="form-group row">
+              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">123</p>
+                <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">abc</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+
+
+          </form>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="business" class="col-sm-6 col-form-label">Cost Center</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control  form-control-sm rounded-0" id="business">
-        </div>
-      </div>
-    </form>
+    </div>
+
   </div>
 
 </div>
