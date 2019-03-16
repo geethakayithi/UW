@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import {animate, AnimationOptions} from '@angular/animations';
+import { UwService } from '../services/uw.service';
+
 
 
 @Component({
@@ -11,6 +13,7 @@ import {animate, AnimationOptions} from '@angular/animations';
 export class UwComponent implements OnInit {
 
   myDoughnutChart=[];
+  uwObject={};
 
    
 data = {
@@ -30,9 +33,10 @@ data = {
   ]
 };
 
-  constructor() { }
+  constructor(private uwService: UwService) { }
 
   ngOnInit() {
+    this.getUWdata();
     this.myDoughnutChart = new Chart('canvas', {
       type: 'doughnut',
       data: this.data,
@@ -42,6 +46,13 @@ data = {
         }
       
   });
+  }
+  getUWdata(){
+    this.uwService.getUWdata()
+    .subscribe((data) =>  {
+      this.uwObject=data;
+      console.log(this.uwObject);
+    });
   }
 
 }

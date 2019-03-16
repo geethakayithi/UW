@@ -2,15 +2,15 @@
   <!--Accordion wrapper-->
   <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
 
-    <!-- Accordion card -->
-    <div class="card">
+
+    <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
 
       <!-- Card header -->
       <div class="card-header" role="tab" id="headingOne1">
         <a data-toggle="collapse" data-parent="#accordionEx" href="#appdecision" aria-expanded="true"
           aria-controls="collapseOne1">
-          <h5 class="mb-0 text-center">
-            Application Decision Information <i class="fas fa-angle-down rotate-icon"></i>
+          <h5 class="mb-0 ">
+            Application Decision Information
           </h5>
         </a>
       </div>
@@ -25,56 +25,70 @@
               <div class="form-group row">
                 <label for="appid" class="col-sm-6 col-form-label">Application ID</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request && uwObject.Request.ID2}}</p>
                   <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Business Name</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.BusName}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
-                <label for="business" class="col-sm-6 col-form-label">Promo Code</label>
+                <label for="business" class="col-sm-6 col-form-label">Trade Name or DBA</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.TradeName}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Relationship Manager First Name</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.RepFName}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Relationship Manager Last Name</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.RepLName}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Relationship Manager Title</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.RepTitle}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">HSBC Representative Phone Number</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.RepPhone}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Cost Center</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.CostC}}</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Current Status</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">{{uwObject.Request.CustData.AppInfo.CurrentStatus}}</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Powercurve Decision</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm"></p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
@@ -84,17 +98,17 @@
       </div>
 
     </div>
-    <!-- Accordion card -->
 
-    <!-- Accordion card -->
+
+
     <div class="card">
 
       <!-- Card header -->
       <div class="card-header" role="tab" id="headingTwo2">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#fico"
-          aria-expanded="false" aria-controls="fico">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#fico" aria-expanded="false"
+          aria-controls="fico">
           <h5 class="mb-0 text-center">
-            Business Score and FICO <i class="fas fa-angle-down rotate-icon"></i>
+            Business Score and FICO
           </h5>
         </a>
       </div>
@@ -111,24 +125,23 @@
       </div>
 
     </div>
-    <!-- Accordion card -->
 
-    <!-- Accordion card -->
-    <div class="card">
+
+
+    <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
 
       <!-- Card header -->
       <div class="card-header" role="tab" id="headingThree3">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#appscore"
-          aria-expanded="false" aria-controls="appscore">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#appscore" aria-expanded="false"
+          aria-controls="appscore">
           <h5 class="mb-0 text-center">
-            Application Score <i class="fas fa-angle-down rotate-icon"></i>
+            Application Score
           </h5>
         </a>
       </div>
 
       <!-- Card body -->
-      <div id="appscore" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
-        data-parent="#accordionEx">
+      <div id="appscore" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
         <div class="card-body">
           <div class="col-sm-12">
             <!-- <h5 class="text-center ">Application Decision Information</h5> -->
@@ -137,49 +150,56 @@
               <div class="form-group row">
                 <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
                 <div class="col-sm-6">
-                  <p class="form-control-static form-control-sm">123</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.BusTotScore}}</p>
                   <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Median Offer Amount</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.MedianOfferAmount}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Decile</label>
                 <div class="col-sm-6">
-                    <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.decile}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
                 <div class="col-sm-6">
-                  <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.LCReason1}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Review Reason 2</label>
                 <div class="col-sm-6">
-                  <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.LCReason2}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Review Reason 3</label>
                 <div class="col-sm-6">
-                  <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.LCReason3}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
               <div class="form-group row">
                 <label for="business" class="col-sm-6 col-form-label">Review Reason 4</label>
                 <div class="col-sm-6">
-                  <p class="form-control-static form-control-sm">abc</p>
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.LiquidCredit.LCReason4}}</p>
                   <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
                 </div>
               </div>
@@ -190,46 +210,55 @@
       </div>
 
     </div>
-    <!-- Accordion card -->
+
 
   </div>
-  <!-- Accordion wrapper -->
-  <div class="card">
+
+  <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
 
     <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2">
+    <div class="card-header" role="tab" id="headingTwo4">
       <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#bcr" aria-expanded="false"
         aria-controls="bcr">
         <h5 class="mb-0 text-center">
-          Business Credit Report Info <i class="fas fa-angle-down rotate-icon"></i>
+          Business Credit Report Info
         </h5>
       </a>
     </div>
 
     <!-- Card body -->
-    <div id="bcr" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+    <div id="bcr" class="collapse" role="tabpanel" aria-labelledby="headingTwo4" data-parent="#accordionEx">
       <div class="card-body">
         <div class="col-sm-12">
           <!-- <h5 class="text-center ">Application Decision Information</h5> -->
 
           <form class="justify-content-center ">
             <div class="form-group row">
-              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <label for="appid" class="col-sm-6 col-form-label">Score</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">123</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.BusinessBureau.CommIntelliscore}}</p>
                 <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
               </div>
             </div>
 
 
             <div class="form-group row">
-              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <label for="business" class="col-sm-6 col-form-label">No Hit Flag</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">abc</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.BusinessBureau.NoHit}}</p>
                 <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
               </div>
             </div>
-
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Bureau Down Flag</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.BusinessBureau.BureauDown}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
 
           </form>
         </div>
@@ -238,38 +267,72 @@
 
   </div>
 
-  <div class="card">
+  <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
 
     <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2">
+    <div class="card-header" role="tab" id="headingTwo5">
       <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#ccr" aria-expanded="false"
         aria-controls="collapseTwo2">
         <h5 class="mb-0 text-center">
-          Consumer Credit Report Info <i class="fas fa-angle-down rotate-icon"></i>
+          Consumer Credit Report Info
         </h5>
       </a>
     </div>
 
     <!-- Card body -->
-    <div id="ccr" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+    <div id="ccr" class="collapse" role="tabpanel" aria-labelledby="headingTwo5" data-parent="#accordionEx">
       <div class="card-body">
         <div class="col-sm-12">
           <!-- <h5 class="text-center ">Application Decision Information</h5> -->
 
           <form class="justify-content-center ">
             <div class="form-group row">
-              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <label for="appid" class="col-sm-6 col-form-label">Score</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">123</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Principal[0].PrincipalDetails.ConBureau.RiskScore}}</p>
                 <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
               </div>
             </div>
 
 
             <div class="form-group row">
-              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <label for="business" class="col-sm-6 col-form-label">Last Bureau Attempted</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">abc</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Principal[0].PrincipalDetails.ConBureau.BureauNm}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Score Factor 1</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Principal[0].PrincipalDetails.ConBureau.ScoreFactor1}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Score Factor 2</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Principal[0].PrincipalDetails.ConBureau.ScoreFactor2}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Score Factor 3</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Principal[0].PrincipalDetails.ConBureau.ScoreFactor3}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Score Factor 4</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Principal[0].PrincipalDetails.ConBureau.ScoreFactor4}}</p>
                 <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
               </div>
             </div>
@@ -281,29 +344,38 @@
     </div>
 
   </div>
-  <div class="card">
+  <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
 
     <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2">
+    <div class="card-header" role="tab" id="headingTwo6">
       <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#reviewreason" aria-expanded="false"
         aria-controls="collapseTwo2">
         <h5 class="mb-0 text-center">
-          Review Reason <i class="fas fa-angle-down rotate-icon"></i>
+          Review Reason
         </h5>
       </a>
     </div>
 
     <!-- Card body -->
-    <div id="reviewreason" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+    <div id="reviewreason" class="collapse" role="tabpanel" aria-labelledby="headingTwo6" data-parent="#accordionEx">
       <div class="card-body">
         <div class="col-sm-12">
           <!-- <h5 class="text-center ">Application Decision Information</h5> -->
 
           <form class="justify-content-center ">
             <div class="form-group row">
-              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <label for="appid" class="col-sm-6 col-form-label">Non Card Segement Category</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">123</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.NonCardSegmentCategory}}</p>
+                <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="appid" class="col-sm-6 col-form-label">Card Segement Category</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.CardSegmentCategory}}</p>
                 <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
               </div>
             </div>
@@ -312,7 +384,40 @@
             <div class="form-group row">
               <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">abc</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.Prod1SWRevCode1}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 2</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.Prod1SWRevCode2}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 3</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.Prod1SWRevCode3}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 4</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.Prod1SWRevCode4}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Review Reason 5</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.PowerCurve.Prod1SWRevCode5}}</p>
                 <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
               </div>
             </div>
@@ -325,43 +430,128 @@
 
   </div>
 
-  <div class="card">
+  <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
 
     <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2">
+    <div class="card-header" role="tab" id="headingTwo7">
       <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#pi" aria-expanded="false"
         aria-controls="pi">
         <h5 class="mb-0 text-center">
-          Product Information <i class="fas fa-angle-down rotate-icon"></i>
+          Product Information
         </h5>
       </a>
     </div>
 
     <!-- Card body -->
-    <div id="pi" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+    <div id="pi" class="collapse" role="tabpanel" aria-labelledby="headingTwo7" data-parent="#accordionEx">
       <div class="card-body">
         <div class="col-sm-12">
           <!-- <h5 class="text-center ">Application Decision Information</h5> -->
 
           <form class="justify-content-center ">
             <div class="form-group row">
-              <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
+              <label for="appid" class="col-sm-6 col-form-label">Product Type</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">123</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].Type}}</p>
                 <!-- <input type="text" class="form-control form-control-sm " id="appid"> -->
               </div>
             </div>
 
 
             <div class="form-group row">
-              <label for="business" class="col-sm-6 col-form-label">Review Reason 1</label>
+              <label for="business" class="col-sm-6 col-form-label">Amount Requested</label>
               <div class="col-sm-6">
-                <p class="form-control-static form-control-sm">abc</p>
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].AmtRequested}}</p>
                 <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
               </div>
             </div>
-
-
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Amount Approved</label>
+              <div class="col-sm-6">
+                <!-- <p class="form-control-static form-control-sm">abc</p> -->
+                <input type="text" class="form-control  form-control-sm " id="business">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Term Requested</label>
+              <div class="col-sm-6">
+                <p class="form-control-static form-control-sm">
+                  {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].TermRequested}}</p>
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Term Approved</label>
+              <div class="col-sm-6">
+                <!-- <p class="form-control-static form-control-sm">abc</p> -->
+                <input type="text" class="form-control  form-control-sm " id="business">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="business" class="col-sm-6 col-form-label">Product Decision</label>
+              <div class="col-sm-6">
+                <!-- <p class="form-control-static form-control-sm">abc</p> -->
+                <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                <select name="" id="" class="form-control  form-control-sm ">
+                  <option value="A">Approve</option>
+                  <option value="D">Decline</option>
+                  <option value="C">Counter Offer</option>
+                </select>
+              </div>
+            </div>
+            <h4 style="text-align:left;margin-top: 1rem;">Variable</h4>
+            <div class="form-group row">
+                <label for="business" class="col-sm-6 col-form-label">Market Variable Spread</label>
+                <div class="col-sm-6">
+                  <p class="form-control-static form-control-sm">
+                    {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].InitSpread}}</p>
+                  <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label for="business" class="col-sm-6 col-form-label">Risk Based Increment</label>
+                  <div class="col-sm-6">
+                    <p class="form-control-static form-control-sm">
+                      {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].RiskBasedIncrement}}</p>
+                    <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="business" class="col-sm-6 col-form-label">Risk Based Spread</label>
+                    <div class="col-sm-6">
+                      <p class="form-control-static form-control-sm">
+                        {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].RiskBasedSpread}}</p>
+                      <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="business" class="col-sm-6 col-form-label">Risk Based Spread After Discounts But Before
+                        The SBA MAX
+                      </label>
+                      <div class="col-sm-6">
+                        <p class="form-control-static form-control-sm">
+                          {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].SecuredDiscount}}</p>
+                        <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="business" class="col-sm-6 col-form-label">SBA Max Spread</label>
+                        <div class="col-sm-6">
+                          <p class="form-control-static form-control-sm">
+                            {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].SBAMaxSpread}}</p>
+                          <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <label for="business" class="col-sm-6 col-form-label">Final Spread</label>
+                          <div class="col-sm-6">
+                            <p class="form-control-static form-control-sm">
+                              {{uwObject.Request.CustData.AppInfo.Products.ProductDetails[0].Spread}}</p>
+                            <!-- <input type="text" class="form-control  form-control-sm " id="business"> -->
+                          </div>
+                        </div>
           </form>
         </div>
       </div>

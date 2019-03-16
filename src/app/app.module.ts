@@ -12,6 +12,8 @@ import {MatDialogModule} from "@angular/material";
 import { ApplicationComponent } from './application/application.component';
 import { BookingComponent } from './booking/booking.component';
 import { UwComponent } from './uw/uw.component';
+import { UwService } from './services/uw.service';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,10 @@ import { UwComponent } from './uw/uw.component';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UwService],
   bootstrap: [AppComponent],
   entryComponents: [SearchComponent]
 })
