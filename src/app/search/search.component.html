@@ -1,43 +1,67 @@
-<form>
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
   <p class="h4 text-center ">Search</p>
   <div class="row">
     <div class="col-6">
       <div class="form-group">
         <label for="appid">App ID</label>
-        <input type="text" class="form-control form-control-sm " id="appid">
+        <input type="text" formControlName="appid" class="form-control form-control-sm " id="appid">
       </div>
       <div class="form-group">
         <label for="tin">TIN</label>
-        <input type="text" class="form-control  form-control-sm " id="tin">
+        <input type="text" formControlName="tin" class="form-control  form-control-sm " id="tin">
       </div>
       <div class="form-group">
         <label for="fname">First Name</label>
-        <input type="text" class="form-control form-control-sm " id="fname">
+        <input type="text" formControlName="fname" class="form-control form-control-sm " id="fname">
       </div>
 
     </div>
     <div class="col-6">
       <div class="form-group">
         <label for="business">Business name</label>
-        <input type="text" class="form-control form-control-sm " id="business">
+        <input type="text" formControlName="business" class="form-control form-control-sm " id="business">
       </div>
       <div class="form-group">
         <label for="">CIN</label>
-        <input type="text" class="form-control form-control-sm " id="cin">
+        <input type="text" formControlName="cin" class="form-control form-control-sm " id="cin">
       </div>
 
       <div class="form-group">
         <label for="lname">Last Name</label>
-        <input type="text" class="form-control form-control-sm " id="lname">
+        <input type="text" formControlName="lname" class="form-control form-control-sm " id="lname">
       </div>
     </div>
   </div>
-
-
-<div style="text-align:right;">
-    <button type="submit" (click)="search()" class="btn btn-primary ">Search</button>
-</div>
-  
+  <div class="row">
+    <div class="col-6">
+      <div style="text-align:left;">
+        <button type="submit" (click)="close()" class="btn btn-primary ">Close</button>
+      </div>
+    </div>
+    <div class="col-6">
+      <div style="text-align:right;">
+        <button type="submit" (click)="search()" class="btn btn-primary ">Search</button>
+    </div>
+    </div>
+  </div>
+    
 </form>
 <hr>
-<p>Search results will be displayed here</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>AppID</th>
+      <th>Status</th>
+      <th>User ID</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <!-- <td>{{uwObject.Request && uwObject.Request.ID}}</td>
+      <td>{{uwObject.Request && uwObject.Request.Status}}</td>
+      <td>{{uwObject.Request && uwObject.Request.userID}}</td> -->
+    </tr>
+    
+  </tbody>
+</table>

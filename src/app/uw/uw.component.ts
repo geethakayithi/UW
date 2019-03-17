@@ -1,10 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
 import { Chart } from 'chart.js';
-import { animate, AnimationOptions } from '@angular/animations';
 import { UwService } from '../services/uw.service';
-
-
 
 @Component({
   selector: 'app-uw',
@@ -12,6 +8,8 @@ import { UwService } from '../services/uw.service';
   styleUrls: ['./uw.component.css']
 })
 export class UwComponent implements OnInit {
+
+  constructor(private uwService: UwService, private elementRef: ElementRef) { }
 
   appScoreChart = [];
   busCreditChart =[];
@@ -28,12 +26,8 @@ export class UwComponent implements OnInit {
     }
   };
   
-
-  constructor(private uwService: UwService, private elementRef: ElementRef) { }
-
   ngOnInit() {
     this.getUWdata();
-
   }
 
   getUWdata() {
