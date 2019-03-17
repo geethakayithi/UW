@@ -14,6 +14,19 @@ export class UwComponent implements OnInit {
 
   myDoughnutChart=[];
   uwObject={};
+  uwReqObject={  
+    "Provenir":  
+    {  
+        "Request":  
+        {  
+            "ID": "138867",  
+            "UserID": "43932172"  
+        }  
+    }  
+};
+
+  
+
 
    
 data = {
@@ -48,7 +61,7 @@ data = {
   });
   }
   getUWdata(){
-    this.uwService.getUWdata()
+    this.uwService.getUWdata(this.uwReqObject)
     .subscribe((data) =>  {
       this.uwObject=data;
       console.log(this.uwObject);
