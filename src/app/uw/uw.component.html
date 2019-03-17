@@ -101,9 +101,9 @@
 
 
 
-    <div class="card">
+    <!-- <div class="card">
 
-      <!-- Card header -->
+      
       <div class="card-header" role="tab" id="headingTwo2">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#fico" aria-expanded="false"
           aria-controls="fico">
@@ -113,7 +113,7 @@
         </a>
       </div>
 
-      <!-- Card body -->
+     
       <div id="fico" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
         <div class="card-body">
           <div class="justify-content-center ">
@@ -124,11 +124,11 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
 
 
 
-    <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
+    <div class="card" >
 
       <!-- Card header -->
       <div class="card-header" role="tab" id="headingThree3">
@@ -145,8 +145,11 @@
         <div class="card-body">
           <div class="col-sm-12">
             <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+            <div class="chart">
+              <canvas id="appscorechart">{{ appScoreChart }}</canvas>
+            </div>
 
-            <form class="justify-content-center ">
+            <form class="justify-content-center " *ngIf="uwObject.Request && uwObject.Request.ID">
               <div class="form-group row">
                 <label for="appid" class="col-sm-6 col-form-label">Liquid Credit Score</label>
                 <div class="col-sm-6">
@@ -214,7 +217,7 @@
 
   </div>
 
-  <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
+  <div class="card" >
 
     <!-- Card header -->
     <div class="card-header" role="tab" id="headingTwo4">
@@ -230,9 +233,11 @@
     <div id="bcr" class="collapse" role="tabpanel" aria-labelledby="headingTwo4" data-parent="#accordionEx">
       <div class="card-body">
         <div class="col-sm-12">
-          <!-- <h5 class="text-center ">Application Decision Information</h5> -->
-
-          <form class="justify-content-center ">
+          
+          <div class="chart">
+            <canvas id="buscreditcorechart">{{ busCreditChart }}</canvas>
+          </div>
+          <form class="justify-content-center " *ngIf="uwObject.Request && uwObject.Request.ID">
             <div class="form-group row">
               <label for="appid" class="col-sm-6 col-form-label">Score</label>
               <div class="col-sm-6">
@@ -267,7 +272,7 @@
 
   </div>
 
-  <div class="card" *ngIf="uwObject.Request && uwObject.Request.ID">
+  <div class="card" >
 
     <!-- Card header -->
     <div class="card-header" role="tab" id="headingTwo5">
@@ -283,9 +288,11 @@
     <div id="ccr" class="collapse" role="tabpanel" aria-labelledby="headingTwo5" data-parent="#accordionEx">
       <div class="card-body">
         <div class="col-sm-12">
-          <!-- <h5 class="text-center ">Application Decision Information</h5> -->
+          <div class="chart">
+            <canvas id="conscreditcorechart">{{ consumerCreditChart }}</canvas>
+          </div>
 
-          <form class="justify-content-center ">
+          <form class="justify-content-center " *ngIf="uwObject.Request && uwObject.Request.ID">
             <div class="form-group row">
               <label for="appid" class="col-sm-6 col-form-label">Score</label>
               <div class="col-sm-6">

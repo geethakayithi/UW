@@ -13,3 +13,13 @@ label {
 .card-header a:hover{
     text-decoration: none;
 }
+.chart{
+    width:250px; 
+    height:130px;
+    margin: auto;
+}
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
