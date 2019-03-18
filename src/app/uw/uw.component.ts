@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 import { UwService } from '../services/uw.service';
+declare var swal: any;
 
 @Component({
   selector: 'app-uw',
@@ -113,6 +114,9 @@ export class UwComponent implements OnInit {
         rotation: -Math.PI
       }
     });
+  }
+  submit(){
+    swal("Your Application is Submitted", "", "success");
   }
 
 }
